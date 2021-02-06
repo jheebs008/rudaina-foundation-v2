@@ -1,0 +1,59 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+
+.formInput{
+  margin-bottom: 1rem;
+
+  .passwordCheckText{
+    font-size: 1.2rem;
+    color: $color-primary-light;
+  }
+
+  .labels{
+    //background-color: grey;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+
+  .label{
+    color: $color-secondary;
+    //background-color: grey;
+    background-image: linear-gradient(white 60%, $color-grey-light 40%,);
+    padding: 0 1rem;
+    display: inline-block;
+    border: 0px solid transparent;
+    transform: translateY(40%);
+    -webkit-transform: translateY(40%);
+    -moz-transform: translateY(40%);
+    -ms-transform: translateY(40%);
+    -o-transform: translateY(40%);
+}
+
+  .label2{
+    color: $color-primary-light;
+    //background-color: grey;
+    background-image: linear-gradient(white 60%, $color-grey-light 40%,);
+    padding: 0 1rem;
+    display: inline-block;
+    transform: translateY(40%);
+    -webkit-transform: translateY(40%);
+    -moz-transform: translateY(40%);
+    -ms-transform: translateY(40%);
+    -o-transform: translateY(40%);
+}
+
+  input{
+    padding: 0 2rem;
+    color: darken($color: $color-grey-light, $amount: 65);
+    width: 100%;
+    border: 1px solid darken($color: $color-grey-light, $amount: 15);
+    height: 4.5rem;
+    @include borderRadius(500px);
+    background-color: $color-grey-light;
+    
+
+  }
+}
+
+

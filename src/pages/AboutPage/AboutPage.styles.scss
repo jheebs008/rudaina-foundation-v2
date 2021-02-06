@@ -1,0 +1,254 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+
+.AboutPageContainer{
+  // background-color: red;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 20% 80%;
+
+  .MenuContainer{
+    // background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // position: relative;
+
+    .DesignBox{
+      position: absolute;
+      height: 30%;
+      width: 40%;
+      transform: translateX(-55%);
+      margin-left: 1rem;
+      border-radius: 1000rem;
+      background-color: #B60D30;
+    }
+
+    .Menus{
+      background-color: #B60D30;
+      padding: 14% 0;
+      transform: translateX(-80%);
+      border-radius: 10rem;
+
+      .MenuBox2{
+        // transform: translateX(5%);
+        // transform: translateX(8%);
+        margin: 6% 0;
+        // margin-left: 1rem;
+      }
+
+      .MenuActive{
+        cursor: pointer;
+        margin-right: -6%;
+        // background-color: $color-white;
+
+        .fas{
+          // cursor: pointer;
+          box-shadow: 0 0 1rem lighten($color: $color-black, $amount: 0);
+          background-color: $color-white;
+          border-radius: 1.5rem;
+          color: $color-primary;
+          // font-size: 2.rem;
+        }
+
+        &:hover{
+          transform: translateX(90%);
+        }
+      }
+
+      .Menu{
+        // height: 4rem;
+        // width: 4rem;
+        display: inline-block;
+        margin-left: 10%;
+        // background-color: yellow;
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        transition: .2s all ;
+        transform: translateX(90%);
+        
+        &:hover{
+          cursor: pointer;
+          // transform: translateX(95%);
+
+          i{
+            // cursor: pointer;
+            box-shadow: 0 0 1rem lighten($color: $color-black, $amount: 0);
+            background-color: darken($color: $color-white, $amount: 0);
+            // border-radius: 1.5rem;
+            color: $color-primary;
+          }
+        }
+
+        i{
+          height: 6rem;
+          width: 6rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          // padding: 1.5rem;
+          background-color: #B60D30;
+          color: $color-white;
+          font-size: 2.5rem;
+          // border: .5rem solid $color-primary;
+          // border-radius: 1000rem;
+          transition: .2s all ;
+          z-index: 3;
+          box-shadow: 0 0 1rem lighten($color: $color-black, $amount: 0);
+        }
+
+        .text{
+          background-color: red;
+          padding: 1.2rem 2rem;
+          border-radius: 100rem;
+          margin-left: 1rem;
+          background-color: $color-grey-light;
+          font-weight: bold;
+          // font-size: 1.5rem;
+        }
+      }
+    }
+    
+  }
+
+  .ceoMessageContainer{
+    background-color: red;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    @include layout-padded;
+
+    .ceoMessageIntro{
+      background-color: green;
+      width: 30%;
+
+      .title{
+        font-size: 5rem;
+        color: $color-primary;
+        font-weight: bold;
+      }
+    }
+
+    .ceoMessage{
+      background-color: blue;
+      width: 70%;
+      height: 70%;
+    }
+  }
+
+  .pledgeContainer{
+    background-color: $color-grey-light;
+    width: 100%;
+    @include layout-padded;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // padding-top: 15rem ;
+    // padding-bottom: 15rem ;
+    clip-path: polygon(0 7%, 100% 0%, 100% 93%, 0% 100%);
+
+
+    .pledges{
+      width: 80%;
+      // @include borderRadius(1rem);
+      overflow: hidden;
+      // box-shadow: 8px 8px 4px 2px darken($color: $color-grey-light, $amount: 5);
+      // -webkit-box-shadow: 0px 0px 80px darken($color: $color-grey-light, $amount: 10);
+      //   box-shadow: 0px 0px 80px darken($color: $color-grey-light, $amount: 10);
+
+      .pledge{
+        
+        // background-color: white;
+        // background-color: $color-white;
+        // @include borderRadius(1000rem);
+        // color: $color-white;
+        word-spacing:  .3rem;
+        // font-weight: bold;
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .image{
+          width: 50%;
+          height: 100%;
+  
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+  
+        .content{
+          width: 50%;
+          padding: 2rem;
+          text-align: center;
+          // background-color: midnightblue;
+  
+          .title{
+            color: $color-primary;
+            font-weight: bold;
+            font-size: 4rem;
+            font-family: 'Niconne', cursive;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            padding-bottom: -4px;
+            position: relative;
+          
+            @include underline;
+          }
+        }
+      }
+    }
+  }
+
+  .teamContainer{
+    width: 100%;
+    @include layout-padded;
+    
+    .team{
+
+      .member{
+        @include borderRadius(.5rem);
+        height: 30vh;
+        width: 30vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        overflow: hidden;
+
+        img{
+          width: 100%;
+          height: 100%;
+          // z-index: 2;
+        }
+
+        // .hanger{
+        //   position: absolute;
+        //   width: 4vh;
+        //   height: 4vh;
+        //   // background-color: green;
+        //   border-top: 4px solid $color-primary;
+        //   border-left: 4px solid $color-primary;
+        //   top : -6%;
+        //   transform: rotate(45deg);
+        //   z-index: 1;
+        // }
+
+        .details{
+          position: absolute;
+          background-color: $color-white;
+          width: 90%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: .5rem;
+          @include borderRadius(.5rem);
+        }
+      }
+    }
+  }
+}

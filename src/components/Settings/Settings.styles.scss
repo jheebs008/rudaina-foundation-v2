@@ -1,0 +1,26 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+
+.Settings{
+  .updateButton{
+    // background-color: green;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 3rem;
+  }
+
+  .titleBox{
+    color: $color-secondary;
+    border-top: 1px solid darken($color: #fff, $amount: 2.5);
+    margin-top: 3rem;
+
+    .title{
+      background-color: $color-white;
+      // background-color: $color-primary;
+      font-weight: bold;
+      @include translate(2rem, -50%);
+      padding: .5rem 1rem;
+      display: inline-block;
+    }
+  }
+}

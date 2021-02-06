@@ -1,0 +1,64 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+
+.textAreaBox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-end;
+  //background-color: green;
+  width: 100%;
+  padding: 1rem 3rem;
+  box-shadow: 0px 0px 4px 1px darken($color: $color-grey-light, $amount: 3);
+
+  .textArea{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: darken($color: $color-grey-light, $amount: 3);
+    //border: 1px solid darken($color: $color-grey-light, $amount: 5);
+    @include borderRadius(500rem);
+    width: 100%;
+    overflow: hidden;
+    padding: .5rem;
+
+    i{
+      font-size: 2rem;
+      padding: 1rem;
+      background-color: white;
+      color: $color-primary;
+      @include borderRadius(500rem);
+      @include transitionWithTime(.3s);
+
+      &:hover{
+        background-color: $color-primary;
+        color: $color-white;
+        cursor: pointer;
+      }
+    }
+
+    .textarea{
+      flex-grow: 100;
+      box-sizing: border-box;
+      border: none;
+      resize: none;
+      //font-size: 20px;
+      background-color: transparent;
+      line-height: 24px;
+      overflow: auto;
+      height: auto;
+      // width: 90%;
+      font-family: inherit;
+      padding: 8px;
+      //box-shadow: 0px 4px 10px -8px black;
+
+      &::placeholder{
+        color: darken($color: $color-grey-light, $amount: 35);
+      }
+
+      &:focus{
+        outline: none;
+      }
+    }
+  }
+}

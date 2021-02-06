@@ -1,0 +1,211 @@
+@import "../../../sass/mixins";
+@import "../../../sass/variables";
+
+.dashboardMenuForum {
+  width: 100%;
+  height: 100%;
+  background-color: darken($color: $color-grey-light, $amount: 1);
+  //background-color: red;
+  display: grid;
+  grid-template-columns: 69% 30%;
+  grid-column-gap: 1%;
+  @include borderRadius(1rem);
+
+  .messageBox {
+    background-color: $color-white;
+    width: 100%;
+    height: 100%;
+    @include borderRadius(1rem);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    .messagesContainer{
+      flex-grow: 100;
+      width: 100%;
+      overflow-y: scroll;
+      padding: 2rem 1rem 0 1rem;
+      // background-color: green;
+
+      .messageBubbleContainer{
+        width: 100%;
+        color: $color-black;
+        display : flex;
+        justify-content: flex-start;
+
+        .myMessageBubble{
+          background-color: darken($color: $color-grey-light, $amount: 0);
+          font-size: 1.4rem;
+          margin: 1.5rem 0 4rem 0;
+          max-width: 60%;
+          padding: 0 1rem;
+          @include borderRadius(1rem);
+          position: relative;
+          border: 1px solid darken($color: $color-white, $amount: 7);
+
+          .senderName{
+            font-weight: bold;
+            background-color: darken($color: $color-grey-light, $amount: 0);
+            border: .7rem solid darken($color: $color-white, $amount: 0);
+            display:inline-block;
+            padding: .5rem 1rem;
+            @include borderRadius(100rem);
+            @include  translate(0 , -3rem);
+            //color: #ff4002;
+          }
+
+          .text{
+            margin-bottom: -1.5rem ;
+            margin-top: -2rem;
+          }
+
+          .dateContainer{
+            //background-color: red;
+            display: flex;
+            justify-content: flex-end;
+
+            .date{
+              font-size: 1.2rem;
+              min-width: 25%;
+              text-align: center;
+              //position: relative;
+              //left: -75%;
+              //top: 0;
+              // background-color: red;
+              display: inline-block;
+              background-color: darken($color: $color-grey-light, $amount: 0);
+              padding: .5rem 1rem;
+              @include borderRadius(100rem);
+              @include  translate(0 , 2rem);
+              border: .4rem solid darken($color: $color-white, $amount: 0);
+            }
+          }
+        }
+      }
+
+      .myMessage{
+        display : flex;
+        justify-content: flex-end;
+      }
+
+      .importantMessage{
+        .myMessageBubble{
+          border: 1px solid darken($color: $color-white, $amount: 7);
+        }
+
+        .senderName{
+          background-color: $color-primary;
+          color: $color-white;
+        }
+      }
+    }
+
+    
+  }
+
+  .peopleBox {
+    background-color: $color-white;
+    width: 100%;
+    height: 55vh;
+    @include borderRadius(1rem);
+    align-self: end;
+    //position: relative; 
+
+    .selectedUserDetails{
+      height: 10%;
+      //color: $color-primary;
+      font-weight: bold;
+      box-shadow: 0px 0px 8px 4px darken($color: $color-grey-light, $amount: 5);
+      padding: 0 1rem;
+      //background-color: green;
+
+      .selectedChatUser{
+        //background-color: yellow;
+        display: flex;
+        align-items: flex-end;
+        @include translate(5%,-55%);
+  
+        .selectedChatThumbnail{
+          width: 10rem;
+          height: 10rem;
+          border: .7rem solid darken($color: $color-grey-light, $amount: 1);
+          bottom: 12;
+          @include borderRadius(500rem);
+    
+          img{
+            width: 100%;
+            height: 100%;
+            @include borderRadius(500rem);
+            padding: .3rem;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+    }
+
+    .userBox{
+      width: 100%;
+      height: 90%;
+      overflow-y: scroll;
+
+      .user{
+        display: flex;
+        align-items: center;
+        color : $color-secondary;
+        height: 7rem;
+        padding: 0 1rem;
+        border-bottom: 1px solid $color-grey-light;
+        border-top: 1px solid $color-grey-light;
+
+        &:hover{
+          cursor: pointer;
+          background-color: darken($color: $color-grey-light, $amount: 0);
+          box-shadow: 0px 0px 4px 1px darken($color: $color-grey-light, $amount: 5);
+
+          .name{
+            font-weight: bold;
+          }
+        }
+  
+        .userDetails{
+          display: flex;
+          flex-direction: column;
+  
+          .name{
+            font-size: 1.4rem;
+          }
+  
+          .latestMessage{
+            font-size: 1.3rem;
+            color: darken($color: $color-grey-light, $amount: 50);
+          }
+        }
+  
+        .unreadMessagesCount{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @include borderRadius(1rem);
+          margin-left: auto;
+          order: 2;
+          color: $color-white;
+          height: 3rem;
+          width: 3rem;
+          text-align: center  ;
+          background-color: $color-primary;
+        }
+  
+        img{
+          width: 6rem;
+          height: 6rem;
+          @include borderRadius(1.5rem);
+          padding: .3rem;
+          background-size: 100% 100%;
+          background-repeat: no-repeat;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}

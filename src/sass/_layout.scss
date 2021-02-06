@@ -1,0 +1,22 @@
+.spaceBetweenHorizontal{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.sigInContainer, .forgotPasswordContainer, .sigUpContainer{
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  margin: 10rem 0;
+  background-color: $color-white;
+
+  .sigIn, .forgotPassword{
+    width: 35%;
+  }
+
+  .sigUp{
+    width: 50%;
+  }
+}

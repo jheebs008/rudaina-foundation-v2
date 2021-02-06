@@ -1,0 +1,342 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+
+.profilePage{
+  width: 100%;
+  height:  100%;
+  display: flex;
+  justify-content: space-between;
+
+  .buttonBox{
+    margin-top: 2rem;
+    // background-color: darkgray;
+    @include borderRadius(1000rem);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .button{
+      background-color: $color-secondary;
+      color: $color-white;
+      height: 4.5rem;
+      width: 20%;
+      @include borderRadius(1000rem);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .main{
+    background-color: white;
+    width: 69%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 1rem 2rem;
+    @include borderRadius(1rem);
+
+    .profile{
+      .Header{
+        // background-color: pink;
+        border-bottom: 3px solid $color-grey-light;
+        padding: 0 4rem;
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 8vh;
+
+        .NameContainer{
+          position: relative;
+
+          .Role{
+            margin-top: .5vw;
+            color: $color-grey-dark;
+            position: absolute;
+          }
+        }
+
+        .ImageProfile{
+          height: 10vh;
+          width: 10vh;
+          margin-right: 9vh;
+          // border-right: 1rem solid black ;
+          // overflow: hidden;
+
+          .thumbnail{
+            background-color: $color-grey-light;
+            height: 17vh;
+            width: 17vh;
+            object-fit: cover;
+            border-radius: 1000rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 3rem;
+            border: 1rem solid $color-white ;
+          }
+
+          img{
+            height: 17vh;
+            width: 17vh;
+            object-fit: cover;
+            border-radius: 1000rem;
+            border: 1rem solid $color-white ;
+          }
+        }
+      }
+      // background-color: grey;
+
+      .about{
+        // background-color: khaki;
+        display: grid;
+        grid-template-columns: 1rem 1fr 1rem ;
+        grid-column-gap: 3rem;
+        padding: .5rem;
+        // position: relative;
+        width: 100%;
+
+        p{
+          text-align: center;
+        }
+
+        .fas{
+          color:  darken($color: $color-grey-light, $amount: 10);
+        }
+
+        .quote-top{
+        }
+
+        .quote-bottom{
+          display: flex;
+          align-items: flex-end;
+        }
+      }
+
+      .MenusContainer{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 5rem;
+        // overflow-x: scroll;
+        border-top: 2px solid $color-grey-light;
+
+        .Menus{
+          display: flex;
+          align-items: center;
+          transform: translateY(-50%);
+
+          i{
+            margin-right: 1rem;
+          }
+
+          .Menu{
+            margin-right: 1rem;
+            background-color: $color-grey-light;
+            padding: .6rem 3rem;
+            border-radius: 100rem;
+            border: .5rem solid $color-white;
+            transition: all .2s ;
+
+            &:hover{
+              background-color: darken($color: $color-grey-light, $amount: 5);
+              transform: translateY(-2px);
+              cursor: pointer;
+            }
+          }
+
+          .MenuActive{
+            margin-right: 1rem;
+            background-color: $color-secondary;
+            padding: .6rem 3rem;
+            border-radius: 100rem;
+            border: .5rem solid $color-white;
+            transition: all .2s ;
+            color: $color-white;
+            transform: translateY(-2px);
+
+            &:hover{
+              background-color: darken($color: $color-secondary, $amount: 0);
+              color: $color-white;
+              // transform: translateY(-2px);
+              cursor: auto;
+            }
+          }
+        }
+      }
+
+      .OptionDisplay{
+        // background-color: red;
+      }
+
+      .SocialLinks{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 2.5rem;
+        .Links{
+          display: flex;
+
+          a{
+            margin-right: 1.5rem;
+
+            i{
+              font-size: 3rem;
+              transition: .2s all;
+              
+              &:hover{
+                color: $color-primary;
+                // box-shadow: 0 0 .5rem grey;
+                transform: scale(1.1);
+              }
+            }
+
+
+            .facebook{
+              color: #4967AA;
+            }
+            
+            .instagram{
+              color: #D13F8D;
+            }
+
+            .email{
+              color: #1DD1F4;
+            }
+
+            .twitter{
+              color: #1A92DA;
+            }
+
+            .phone{
+              color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sub{
+    // background-color: green;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .contactCard{
+      // color: white;
+      // background-color: $color-secondary;
+      @include borderRadius(1rem);
+      // background: linear-gradient(to bottom right , $color-white , snow);
+      background-color: white;
+      width: 100%;
+      height:  30%;
+      display: flex;
+      flex-direction: column  ;
+      justify-content: center;
+      align-items: center;
+
+      .contact{
+        width: 60%;
+        margin-top: 2rem;
+        // background-color: grey;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .iconContainer{
+          display: flex;
+          flex-direction: column  ;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .fas{
+          color: white;
+          font-size: 3rem;
+          padding: 2rem;
+          @include borderRadius(200rem);
+          background-color: $color-primary;
+        }
+      }
+    }
+
+    .notificationBox{
+      @include borderRadius(1rem);
+      overflow: hidden ;
+      // background-color: green;
+      background-color: $color-white;
+      width: 100%;
+      height:  68%;
+
+      .title{
+        width: 100%;
+        height:  10%;
+        display: flex;
+        align-items: center;
+        padding:  0 1rem;
+        font-size: 2rem;
+        font-weight: bold;
+        border-bottom: 1px solid darken($color: $color-grey-light, $amount: 2);
+        // box-shadow: 0px 6px 5px 6px darken($color: $color-grey-light, $amount: 10);
+      }
+
+      .content{
+        width: 100%;
+        height:  90%;
+        padding:  1rem;
+        overflow: hidden;
+        overflow-y: scroll;
+
+        .notification{
+          background-color: $color-grey-light ;
+          padding:  1rem;
+          margin: 2rem 0 3rem 0;
+          @include borderRadius(1rem);
+          box-shadow: 0 0 .5rem darken($color: $color-grey-light, $amount: 15);
+
+          .notificationHeading{
+            // background-color: darkgoldenrod;
+            // height: 3rem;
+            // width: 100%;
+            // // display: flex;
+            // // align-items: center;
+            margin-bottom: 1rem;
+            position: relative;
+
+            .iconContainer{
+              width: 6rem;
+              height: 6rem;
+              position: absolute;
+              // background-color: darken($color: $color-grey-light, $amount: 10);
+              // // background-color: green;
+              // border: .3rem solid $color-white;
+              @include borderRadius(1000rem);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-left: 1rem;
+              @include translate(0, -50%);
+              font-size: 4.5rem;
+              color: $color-primary;
+              background-color: $color-white;
+            }
+
+            .name{
+              // display: inline-block;
+              margin-left: 7.5rem;
+              font-weight: bold;
+            }
+          }
+
+          .notificationFooter{
+            display: flex;
+            justify-content: flex-end;
+            font-size: 1.4rem;
+            color: grey;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,122 @@
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+      @media only screen and (max-width: 37.5em) { @content };    //600px
+  }
+  @if $breakpoint == tab-port {
+      @media only screen and (max-width: 56.25em) { @content };     //900px
+  }
+  @if $breakpoint == tab-land {
+      @media only screen and (max-width: 75em) { @content };    //1200px
+  }
+  @if $breakpoint == big-desktop {
+      @media only screen and (min-width: 112.5em) { @content };    //1800
+  }
+}
+
+@mixin horizontal-gutter{
+    padding: 0 5vw;
+  }
+
+@mixin textColor($color){
+    background-color: $color;
+}
+
+@mixin icon{
+    height: 4rem;
+    width: 4rem;
+    font-size: 2rem;
+    // border-radius: 100rem;
+}
+
+@mixin tilt{
+    color: $color-primary;
+    box-shadow: 0 1rem 2rem rgba($color-black, .4);
+    border-bottom: 2px solid $color-primary;
+    // transform: rotate(15deg) scale(1.0);
+    // -webkit-transform: rotate(5deg) scale(1.0);
+    // -moz-transform: rotate(15deg) scale(1.0);
+    // -ms-transform: rotate(15deg) scale(1.0);
+    // -o-transform: rotate(15deg) scale(1.0);
+}
+
+@mixin borderRadius($rad){
+    border-radius: $rad;
+    -webkit-border-radius: $rad;
+    -moz-border-radius: $rad;
+    -ms-border-radius: $rad;
+    -o-border-radius: $rad;
+}
+
+@mixin translate($x, $y ){
+    transform: translate($x, $y);
+    -webkit-transform: translate($x, $y);
+    -moz-transform: translate($x, $y);
+    -ms-transform: translate($x, $y);
+    -o-transform: translate($x, $y);
+}
+
+@mixin spaceBetweenHorizontal{
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin transition{
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+}
+
+@mixin transitionWithTime($t){
+    transition: all $t ease-in-out;
+    -webkit-transition: all $t ease-in-out;
+    -moz-transition: all $t ease-in-out;
+    -ms-transition: all $t ease-in-out;
+    -o-transition: all $t ease-in-out;
+}
+
+@mixin layout-padded{ //
+    padding: 0 5vw;
+}
+
+@mixin rotate($deg){ //
+    transform: rotate($deg);
+}
+
+@mixin underline{
+    &:before{
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 1px;
+        bottom: 0;
+        border-bottom: 3px solid $color-primary;
+    }
+}
+
+@mixin underlineTop{
+    &:before{
+        content: "";
+        position: absolute;
+        width: 50%;
+        height: 1px;
+        // bottom: 0;
+        border-bottom: 3px solid $color-primary;
+    }
+}
+
+@mixin underlineWithColor($color){
+    &:before{
+        content: "";
+        position: absolute;
+        width: 40%;
+        height: 1px;
+        bottom: 0;
+        border-bottom: 3px solid $color;
+    }
+}
+
+
+
+

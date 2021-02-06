@@ -1,0 +1,115 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+
+//style={{ backgroundImage: `linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5)), url(${"./img/homepage.png"})`, backgroundRepeat : "no-repeat", backgroundSize : "100% 100%"}}
+
+.SubheaderContainer{
+  background-color: $color-white;
+  // clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+  // position: relative;
+  // background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  //   background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  //   background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  //   background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  //   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1)));
+  //   background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+
+  .Subheader{
+    height: 90vh;
+    @include layout-padded;
+    padding-top: 3rem;
+    position: relative;
+    // background-color: pink;
+    // clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+    // overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+
+    .imageBox{
+      height: 40vw;
+      width: 40vw;
+      // position: absolute;
+      // top: -10rem;
+      // left: 45%;
+      // border: 1rem solid darken($color: $color-grey-light, $amount: 10);
+      @include borderRadius(100rem);
+      // background-color:   lighten($color: $color-primary, $amount: 40);
+      // background-color: darken($color: $color-grey-light, $amount: 2);
+      // overflow: hidden;
+
+  
+        img{
+          width: 100%;
+          height: 100%;
+          // color:red ;
+          // @include borderRadius(1000rem);
+        }
+    }
+
+    .ctaBox{
+      // background-color: red;
+      // width: 40%;
+      font-size: 2rem;
+      // margin-top: 3rem;
+      // background-color: white;
+      // box-shadow: 0 0 20px darken($color: $color-grey-light, $amount: 15);
+      padding : 2rem;
+      padding-top : 10rem;
+      @include borderRadius(1rem);
+
+      .slogan{
+        // background-color: darkblue;
+        font-size: 5rem;
+        word-spacing: .7rem;
+        font-weight: bold;
+        position: relative;
+        // font-family: 'Suez One', serif;
+        // font-family: 'Shojumaru', cursive;
+
+        .different{
+          // color: $color-white;
+          position: relative;
+          @include translate(-1rem, 0);
+          display: inline-block;
+          z-index: 20;
+          // background-color: green;
+          padding : 0 2rem;
+          clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+          background-image: linear-gradient(to right, rgba(lighten($color: $color-primary, $amount: 30), .6), rgba($color-primary, 1));
+        }
+
+        .modify{
+          // color: $color-white;
+          z-index: 1;
+          @include translate(-2rem, -.8rem);
+        }
+      }
+
+      .text{
+        // font-size: 2.5rem;
+        word-spacing: .2rem;
+        margin: 2rem 0;
+      }
+
+      .buttonContainer{
+        // color: $color-primary;
+        display: flex;
+        justify-content: flex-end;
+        font-weight: bold;
+
+        .button{
+          padding-bottom : .5rem ;
+          color: $color-primary;
+          border-bottom: 2px solid  $color-primary;
+          // color: $color-white
+          transition: .2s all;
+  
+          &:hover{
+            border-bottom: 5px solid  $color-primary;
+            transform: translateY(-3px);
+          }
+        }
+      }
+    }
+  }
+}

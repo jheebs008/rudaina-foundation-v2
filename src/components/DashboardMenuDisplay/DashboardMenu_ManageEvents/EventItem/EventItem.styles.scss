@@ -1,0 +1,163 @@
+@import "../../../../sass/mixins";
+@import "../../../../sass/variables";
+
+.event{
+  background-color: $color-grey-light;
+  padding: 1rem 2rem;
+  min-width: 90%;
+  @include borderRadius(2rem);
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+  box-shadow: 0px 0px 4px 2px darken($color: $color-grey-light, $amount: 5);
+  position: relative;
+
+  .closeButton{
+    background-color: $color-grey-light;
+    //background-color: red;
+    width: 5rem;
+    height: 5rem;
+    @include borderRadius(15rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 1rem;
+    top: -2rem;
+    border: .5rem solid $color-white;
+    @include transition;
+
+    i{
+      font-size: 3rem;
+      color: $color-primary;
+      @include borderRadius(15rem);
+    }
+
+    &:hover{
+      background-color: $color-primary;
+      cursor: pointer;
+      i{
+        color: $color-white;
+      }
+    }
+  }
+
+  .title{
+    font-weight: bold;
+    font-size: 1.7rem;
+  }
+
+  .subText{
+    font-size: 1.4rem;
+    color: lighten($color: #000000, $amount: 20)
+  }
+
+  .description{
+    margin: 1rem 0;
+    //color: $color-secondary
+  }
+
+  .eventFooter{
+    //background-color: blue;
+
+    .attendees{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1.5rem;
+
+      .hideThumbnails{
+        display: none;
+      }
+
+      .eventActions{
+        display: flex;
+        align-items: center;
+
+        .action{
+          display: flex;
+          align-items: center;
+          background-color: $color-white;
+          @include borderRadius(15rem);
+          padding: .5rem 1rem .5rem .5rem;
+          color: $color-primary;
+          cursor: pointer;
+
+          &:hover{
+            box-shadow: 0px 0px 4px 3px darken($color: $color-grey-light, $amount: 5);
+            font-weight: bold;
+            @include transitionWithTime(.2s);
+          }
+
+          i{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 3rem;
+            width: 3rem;
+            @include borderRadius(15rem);
+            background-color: $color-primary;
+            color: $color-white;
+            margin-right: 1rem;
+          }
+        }
+      }
+
+      .attendeesDetails{
+        display: flex;  
+        align-items: center;
+        margin-top: .5rem;
+
+        .showButton{
+          color: $color-primary;
+          @include translate(-2rem, 0);
+          @include transition;
+
+          &:hover{
+            font-weight: bold;
+            cursor: pointer;
+          }
+        }
+
+        .attendeesThumbnails{
+          display: flex;  
+          align-items: center;
+
+          .img{
+            width: 6rem;
+            height: 6rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include borderRadius(15rem);
+            //padding: .1px;
+            background-color: $color-white;
+            border-top: 2px solid $color-black;
+            border-right: 2px solid $color-black;
+
+            i{
+              font-size: 4rem;
+              color: grey;
+            }
+
+            img{
+              width: 100%;
+              height: 100%;
+              @include borderRadius(15rem);
+              padding: .2rem;
+              background-size: 100% 100%;
+              background-repeat: no-repeat;
+              // margin-right: 1rem;
+            } 
+          }
+          .img1{ 
+            @include translate(-30%, 0);
+          }
+
+          .img2{ 
+            @include translate(-55%, 0);
+          }
+        }
+      }
+    }
+  }
+}

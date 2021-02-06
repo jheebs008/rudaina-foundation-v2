@@ -1,0 +1,126 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+
+.animatedButtonContainer{
+  background-color: transparent;
+
+  .profilePageButton{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @include transition;
+    height: 4.5rem;
+    width: 4.5rem;
+    @include borderRadius(1000rem);
+    background-color: $color-secondary;
+ 
+  
+    &:hover{
+      cursor: pointer;
+      background-color: darken($color:$color-primary, $amount: 5);
+      width: 12rem;
+      // transform: scale(.75);
+  
+      .title{
+        display: inline;
+        color: $color-white;
+        @include translate(0, 0);
+        // margin-left: 1.5rem;
+      }
+  
+      .fas{
+        background-color: $color-white;
+        color: $color-primary;
+        transform: scale(.75);
+      }
+    }
+  
+    .fas{
+      color: $color-white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2.5rem;
+      height: 4.5rem;
+      width: 4.5rem;
+      @include transitionWithTime(.4s);
+      @include borderRadius(1000rem);
+      // @include transitionWithTime(.5s);
+    }
+    
+    .title{
+      display: none;
+      @include translate(0, 1rem);
+      @include transitionWithTime(.4s);
+      color: $color-primary;
+      // @include transitionWithTime(.5s);
+      white-space: nowrap;
+      overflow: hidden;
+      font-weight: bold;
+      margin-left: 1rem;
+      font-size: 1.7rem;
+    }
+  }
+
+  .animatedButton{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    @include transition;
+    height: 4.5rem;
+    width: 4.5rem;
+    @include borderRadius(1000rem);
+    // background-color: $color-primary;
+    // background-color: blue;
+  
+    &:hover{
+      cursor: pointer;
+      background-color: darken($color:$color-primary, $amount: 5);
+      width: 12rem;
+      // transform: scale(.75);
+  
+      .title{
+        display: inline;
+        color: $color-white;
+        // @include translate(0, 0);
+        // margin-left: 1.5rem;
+      }
+  
+      .fas{
+        background-color: $color-white;
+        color: $color-primary;
+        transform: scale(.75);
+      }
+    }
+  
+    .fas{
+      color: $color-white;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      // margin:0 auto;
+      padding: 1rem;
+      font-size: 2.5rem;
+      // height: 4.5rem;
+      // width: 4.5rem;
+      @include transitionWithTime(.4s);
+      @include borderRadius(1000rem);
+      // @include transitionWithTime(.5s);
+      background-color: $color-primary;
+    }
+    
+    .title{
+      display: none;
+      @include translate(0, 1rem);
+      @include transitionWithTime(.4s);
+      color: $color-primary;
+      // @include transitionWithTime(.5s);
+      white-space: nowrap;
+      overflow: hidden;
+      font-weight: bold;
+      margin-left: 1rem;
+      font-size: 1.7rem;
+      margin-right: 1rem;
+    }
+  }
+}

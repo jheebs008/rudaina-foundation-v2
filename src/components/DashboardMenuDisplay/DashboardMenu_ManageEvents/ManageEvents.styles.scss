@@ -1,0 +1,200 @@
+@import "../../../sass/mixins";
+@import "../../../sass/variables";
+
+.manageEvents{
+  display:  grid;
+  grid-template-columns: 40% 59%;
+  height: 100%;
+  grid-column-gap: 1%;
+  background-color: darken($color: $color-grey-light, $amount: 1);
+
+  .addEvent{
+    background-color: $color-white;
+    height: 100%;
+    @include borderRadius(1rem);
+    padding : 1rem;
+
+    .title{
+      font-size: 18px;
+      font-weight: bold;
+      display: inline-block;
+      padding-bottom: 3px;
+      position: relative;
+      margin-bottom: 1rem;
+      text-transform: capitalize;
+
+      // @include underline;
+    }
+
+    .buttonContainer{
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 3rem;
+    }
+  }
+
+  .viewEvents{
+    background-color: $color-white;
+    height: 82vh;
+    @include borderRadius(1rem);
+    padding : 1rem 2rem;
+    position: relative;
+
+    .modal{
+      position: absolute;
+      background-color: rgba($color: $color-grey-light, $alpha: .8);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2;
+
+      .box{
+        background-color: $color-white;
+        border-radius: 1rem;
+        padding: 2rem;
+        -webkit-box-shadow: 0 0 10px grey;
+        box-shadow: 0 0 10px grey;
+        width: 60%;
+        color: $color-secondary;
+
+        .title{
+          color: $color-black;
+          font-size: 2.5rem;
+          // text-transform: uppercase;
+          // display: inline-block;
+          // padding-bottom: 5px;
+          // position: relative;
+          // // margin-bottom: 1rem;
+          // font-weight: bold;
+        
+          // @include underline;
+        }
+
+        .text{
+          margin: 1rem 0;
+        }
+
+        .buttons{
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          font-size: 2rem;
+
+          .yes{
+            padding: .3rem 3rem;
+            border-right: 1px solid grey;
+            background-color: green;
+            color: white;
+            border-radius: 1rem;
+            margin-right: 1rem;
+            transition: all .2s;
+
+            &:hover{
+              background-color: darken($color: green, $amount: 0);
+              cursor: pointer;
+              transform: scale(1.04);
+              -webkit-box-shadow: 0 0 10px grey;
+              box-shadow: 0 0 10px grey;
+            }
+
+            &:active{
+              transform: scale(.99);
+              -webkit-box-shadow: 0 0 5px grey;
+              box-shadow: 0 0 5px grey;
+            }
+          }
+
+          .no{
+            padding: .3rem 3rem;
+            background-color: red;
+            color: white;
+            border-radius: 1rem;
+            transition: all .2s;
+
+            &:hover{
+              background-color: darken($color: red, $amount: 0);
+              cursor: pointer;
+              transform: scale(1.04);
+              -webkit-box-shadow: 0 0 10px grey;
+              box-shadow: 0 0 10px grey;
+            }
+
+            &:active{
+              transform: scale(.99);
+              -webkit-box-shadow: 0 0 5px grey;
+              box-shadow: 0 0 5px grey;
+            }
+          }
+        }
+      }
+    }
+
+    .eventsOptions{
+      display: flex;
+      align-items: center;
+      //background-color: green;
+      height: 7%;
+      // height: 5vh;
+
+      .selectDropdown{
+        // border: 1px solid transparent;
+        // border-radius: 9rem !important;
+        width: 50%;
+      }
+
+      .option{
+        font-size: 18px;
+        display: inline-block;
+        padding-bottom: 3px;
+        position: relative;
+        margin-bottom: 1rem;
+        margin-right: 2rem;
+        cursor: pointer;
+        @include transition;
+
+        &:hover{
+          //@include underline;
+          font-weight: bold;
+        }
+      }
+
+      .activeOption{
+        font-size: 18px;
+        font-weight: bold;
+        display: inline-block;
+        padding-bottom: 3px;
+        position: relative;
+        margin-bottom: 1rem;
+        margin-right: 2rem;
+        cursor: pointer;
+
+        @include underline;
+      }
+    }
+    .eventsContainer{
+      height: 95%;
+      width: 100%;
+      overflow-y: scroll;
+      // padding-top: 1rem;
+      //background-color: blue;
+
+      .loadingEvents{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .events{
+        //background-color: red;
+        width: 100%;
+        height: 77vh;
+        overflow: hidden;
+        overflow-y: scroll;
+      }
+    }
+  }
+}

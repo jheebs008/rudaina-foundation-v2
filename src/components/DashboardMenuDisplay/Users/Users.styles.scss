@@ -1,0 +1,237 @@
+@import "../../../sass/mixins";
+@import "../../../sass/variables";
+
+.usersContainer{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 59% 40%;
+  grid-column-gap: 1%;
+  // background-color: $color-white;
+
+  .categories{
+    width: 100%;
+    background-color: $color-white;
+    height: 82vh;
+    @include borderRadius(1rem);
+    padding : 0rem 2rem;
+
+    .__header{
+      display: flex;
+      justify-content: space-between  ;
+      align-items: center;
+      width: 100%;
+      // padding-top: 1rem;
+      height: 7%;
+      // background-color: red;
+
+      .selectDropdown{
+        // border: 1px solid transparent;
+        // border-radius: 9rem !important;
+        width: 22%;
+      }
+
+      .filterSearch{
+        width: 50%;
+        height: 4rem;
+        padding-left: 2rem;
+        border-radius: 1rem;
+        // background-color: $color-grey-light;
+        border: 1px solid darken($color: $color-grey-light, $amount: 5);
+      }
+    }
+
+    .options{
+      display: flex;
+      align-items: center;
+      //box-shadow: 0px 0px 4px 1px darken($color: $color-grey-light, $amount: 5);
+      height: 5vh;
+      //background-color: red;
+
+      .option{
+        font-size: 18px;
+        display: inline-block;
+        padding-bottom: 3px;
+        position: relative;
+        margin-bottom: 1rem;
+        margin-right: 2rem;
+        cursor: pointer;
+        @include transition;
+
+        &:hover{
+          //@include underline;
+          font-weight: bold;
+        }
+      }
+
+      .activeOption{
+        font-size: 18px;
+        font-weight: bold;
+        display: inline-block;
+        padding-bottom: 3px;
+        position: relative;
+        margin-bottom: 1rem;
+        margin-right: 2rem;
+        cursor: pointer;
+
+        @include underline;
+      }
+    }
+    .users{
+      height: 77vh;
+      width: 100%;
+      // background-color: #ddf;
+
+      .userHeader{
+        font-weight: bold;
+        font-size: 18px;
+        //border-bottom: 2px solid $color-primary;
+
+        &:hover{
+          cursor:auto !important ;
+          background-color: transparent !important;
+        }
+      }
+
+      .selectedUser{
+        background-color: $color-grey-light;
+        font-weight:  bold;
+        -webkit-box-shadow: 0 0 10px #fff;
+          box-shadow: 0 0 10px darken($color: $color-grey-light, $amount: 10);
+      }
+
+      .user{
+        width: 100%;
+        padding: 1rem 1rem;
+        display: grid;
+        grid-template-columns: 5% 63% 30%;
+        grid-column-gap: 1%;
+        //background-color: hotpink;
+        border-bottom: 2px solid $color-grey-light;
+
+        &:hover{
+          cursor: pointer;
+          background-color: $color-grey-light;
+        }
+      }
+      .userListScroll{
+        width: 100%;
+        height: 92%;
+        overflow: hidden;
+        overflow-y: scroll;
+        //background-color: hotpink;
+      }
+    }
+  }
+
+  .details{
+    width: 100%;
+    height: 100%;
+    @include borderRadius(1rem);
+    overflow-y: scroll;
+    padding : 1rem;
+    
+
+    .baskets{
+      // background-color: green;
+      // height: 10rem;
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content:  space-between;
+      padding-top: 1rem;
+      margin-left: -1rem;
+
+      .basket{
+        // background-color: blue;
+        height: 100%;
+        width: 30%;
+        // position: relative;
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-between;
+        align-items: center;
+
+        i{
+          font-size: 5rem;
+          margin-bottom: .5rem;
+        }
+
+        .basketLabel{
+          // padding: .5rem 1rem;
+          // border-radius: 100rem;
+          // border: 3px solid white;
+          // position: absolute;
+          // bottom: 0;
+          // right: 0;
+          // background-color: $color-grey-light;
+        }
+      }
+
+      .receivedBasket{
+        i{
+          color: green;
+        }
+        // background-color: green;
+        // color: white;
+        font-weight: bold;
+      }
+    }
+
+    .detail{
+      margin-bottom: 1.5rem;
+      margin-left:  1rem;
+    }
+
+    .label{
+      background-color: darken($color: $color-grey-light, $amount: 10);
+      margin-right: 1rem;
+      margin-left:  -1rem;
+      padding: .5rem 1rem;
+      display: inline-block;
+
+      &:hover{
+        cursor: pointer;
+      }
+    }
+
+    .decisionButtonContainer{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // margin-top: 2rem;
+      border-top: 1px solid darken($color: $color-grey-light, $amount: 5);
+      // background-color: red;
+
+      .decisionButton{
+        margin-top: 1.5rem;
+        // height: 4rem;
+        padding : 1rem 3rem;
+        background-color: $color-primary;
+        color: $color-white;
+        border-radius: 3000rem;
+
+        &:hover{
+          cursor: pointer;
+          background-color: darken($color: $color-primary, $amount: 10);
+        }
+      }
+
+      .decisionButtonDisapprove{
+        margin-top: 1.5rem;
+        // height: 4rem;
+        padding : 1rem 3rem;
+        background-color: grey;
+        color: $color-white;
+        border-radius: 3000rem;
+
+        &:hover{
+          cursor: pointer;
+          background-color: darken($color: $color-black, $amount: 10);
+        }
+      }
+    }
+    background-color: $color-white;
+  }
+}

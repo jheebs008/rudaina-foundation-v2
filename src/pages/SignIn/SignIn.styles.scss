@@ -1,0 +1,53 @@
+@import "../../sass/variables";
+@import "../../sass/mixins";
+
+.authButton{
+  padding: 1rem;
+  width: 15rem;
+  height: 4.5rem;
+  @include borderRadius(500px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //font-size: bold;
+  border: 2px solid $color-primary;
+  background-color: $color-primary;
+  color: $color-white;
+  cursor: pointer;
+  font-size: 2rem;
+  @include transition;
+  position: relative;
+
+  span{
+    margin-right: 1rem;
+  }
+
+
+  i{
+    margin-left: 1rem;
+    font-size: 1.7rem;
+    position:absolute;
+    transition:.5s;
+    -webkit-transition:.5s;
+    -moz-transition:.5s;
+    -ms-transition:.5s;
+    -o-transition:.5s;
+    right: 0;
+    opacity: 0;
+}
+}
+
+.authButton:hover{
+  color: $color-primary;
+  background-color: $color-grey-light;
+  border: 2px solid $color-primary;
+  // -moz-box-shadow: 0 0 4px #000;
+  // -webkit-box-shadow: 0 0 4px #000;
+  // box-shadow: 0 2px 4px #000;
+
+
+  i{
+    right: 25px;
+    opacity: 1;
+  }
+}

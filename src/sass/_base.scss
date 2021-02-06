@@ -1,0 +1,148 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is
+    font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+    @include respond(tab-land) { // width < 1200?
+        font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+    }
+
+    @include respond(tab-port) { // width < 900?
+        font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    }
+    
+    @include respond(big-desktop) {
+        font-size: 75%; //1rem = 12, 12/16
+    }
+}
+
+body {
+    box-sizing: border-box;
+    background-color: lighten($color: $color-primary, $amount: 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // letter-spacing: 10px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.app{
+    letter-spacing: .4px;
+    width: 99.5vw;
+    height: 99vh;
+    // background-color: $color-grey-light;
+    background-color: $color-white;
+    box-shadow: $shadow-dark;
+
+    &__content{
+        height: 92%;
+        width: 100%;
+        // background-color: blue;
+        // background-color: green;
+        overflow-y: scroll;
+    }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    @include transition;
+}
+
+// a:hover{
+//     font-weight: bold;
+//     color: red;
+//     border-bottom: 1px solid  red;
+//   }
+
+input, button{
+    font-family: inherit;
+    font-size: inherit;
+    //background-color: transparent;
+}
+
+textarea:focus, input:focus, input:active,button, button:focus, button:active, select:focus, select:active{
+    outline: none;
+    font-family: inherit;
+    border: none;
+    //background-color: transparent;
+}
+
+.authBottomMarginTop{
+    margin-top: 3rem;
+  }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px $color-grey-light inset !important;
+    
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+.animate {
+    -moz-transition:all .5s ease-in-out 0s;
+    -o-transition:all .5s ease-in-out 0s;
+    -webkit-transition:all .5s ease-in-out 0s;
+}
+
+.listItems{
+    display: flex;
+    margin-bottom: .2rem;
+
+    .bulletPoint{
+      color: grey;
+      margin-right: 1rem;
+      font-weight: bold;
+    //   display: none;
+    }
+  }
+
+.buttonPressEffect{ 
+    box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+    &:active {
+        transform: translateY(3px);
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    }
+}
+
+.buttonUnderline{
+    font-weight:  bold;
+    font-size: 2.2rem;
+    float: right;
+    padding-bottom: 2px;
+    position: relative;
+    @include rotate(-3deg);
+  
+    @include underline;
+
+    &:hover{
+      @include rotate(0deg);
+      color: $color-primary;
+    }
+  }
+
+.toastContainer{
+    font-family: "Acme";
+    font-weight: bold;
+}
+
+

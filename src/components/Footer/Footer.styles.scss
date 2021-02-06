@@ -1,0 +1,382 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+
+.footer-container{
+  // padding-top: 4rem;
+  background-color: $color-secondary ;
+  color: white;
+
+  .footer{
+    // @include layout-padded;
+    @include horizontal-gutter;
+
+    .footer-info{
+      display: flex;
+      justify-content: space-between;
+      padding: 3rem 0;
+      // background-color: red;
+
+      .footer-text{
+        width: 45%;
+
+        .title{
+          font-size: 25px;
+          display: inline-block;
+          padding-bottom: 3px;
+          position: relative;
+          margin-bottom: 1rem;
+  
+          @include underline;
+        }
+
+        .rudaina-link{
+          display: flex;
+          flex-direction: column;
+          // align-items: flex-start;
+          margin-top: 1rem;
+
+          .link{
+            display: flex;
+            flex-direction: row;
+            align-items:  center;
+            margin-right: 1rem;
+            margin-bottom: .6rem;
+
+            i{
+              margin-right: .5rem;
+              color: red;
+              font-size: 1.3rem;
+              display: none;
+            }
+
+            a{
+              // margin-bottom: .4rem;
+              text-transform: uppercase;
+              display: inline-block;
+              color: #444444;
+            }
+          }
+        }
+      }
+
+      .footer-contact{
+        width: 50%;
+        // background-color: blue;
+
+        .title{
+          font-size: 25px;
+          display: inline-block;
+          padding-bottom: 7px;
+          position: relative;
+          margin-bottom: 1rem;
+  
+          @include underline;
+        }
+
+        .formContainer{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          // color: white;
+          background-color: darken($color: $color-secondary , $amount: 5);
+          height: 5rem;
+          margin: 2rem 0;
+          width: 85%;
+          padding: .4rem ;
+          overflow: hidden;
+          border-radius: 1000px;
+          -webkit-border-radius: 1000px;
+          -moz-border-radius: 1000px;
+          -ms-border-radius: 1000px;
+          -o-border-radius: 1000px;
+
+          input:focus, input:active{ 
+            border: 1px solid transparent;
+          }
+
+          .emailField{
+            width: 75%;
+            height: 100%;
+            overflow: hidden;
+            border: 1px solid transparent;
+            color: white;
+            padding-left: 1rem;
+            color: $color-grey-dark;
+            // background-color: darken($color: $color-secondary , $amount: 0);
+            background-color: transparent;
+          }
+  
+          .submitButton{
+            width: 25%;
+            height: 100%;
+            color: white;
+            font-family: Acme;
+            font-size: 1.8rem;
+            border: 2px solid transparent;
+            background-color: $color-primary;
+            transition: all 2s ease-in-out;
+            -webkit-transition: all .2s ease-in-out;
+            -moz-transition: all 2s ease-in-out;
+            -ms-transition: all 2s ease-in-out;
+            -o-transition: all 2s ease-in-out;
+            border-radius: 1000px;
+            -webkit-border-radius: 1000px;
+            -moz-border-radius: 1000px;
+            -ms-border-radius: 1000px;
+            -o-border-radius: 1000px;
+  
+            &:hover{
+              color: red;
+              background-color: white;
+              border: 2px solid white;
+              cursor: pointer;
+            }
+          }
+        }
+
+        .footer-social{
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          // background-color: red;
+          // margin: .5rem 0;
+        
+          i{
+            display: flex;
+            font-size: 2.5rem;
+            color:white;
+            justify-content: center;
+            align-items: center;
+            height: 5rem;
+            width: 5rem;
+            margin-right: 1rem;
+            border-radius: 1000px;
+            -webkit-border-radius: 1000px;
+            -moz-border-radius: 1000px;
+            -ms-border-radius: 1000px;
+            -o-border-radius: 1000px;
+            transition: all .2s ease-in;
+            -webkit-transition: all .2s ease-in;
+            -moz-transition: all .2s ease-in;
+            -ms-transition: all .2s ease-in;
+            -o-transition: all .2s ease-in;
+            -moz-box-shadow: 0 0 4px #000;
+            -webkit-box-shadow: 0 0 4px #000;
+            box-shadow: 0 0 4px #000;
+        
+            &:hover{
+              opacity: .7;
+            }
+          }
+        
+          .fa-facebook{
+            background-color: #3F558F;
+          }
+          
+          .fa-instagram{
+            background-color: blue;
+            background: linear-gradient(to bottom right , #5850C3 , #D72C6F)
+          }
+          
+          .fa-twitter-square{
+            background-color: #00A7E5;
+          }
+          
+          .fa-linkedin-in{
+            background-color: #0277B0;
+          }
+        
+          .fa-envelope{
+            background-color: #E65A4D;
+          }
+        } 
+      }
+    }
+
+    .footerLinks-copyright{
+      // background-color: grey;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding : 2rem 0 ;
+      border-top: .5px solid white;
+      // background-color: grey;
+  
+      .company-name{
+        font-weight: bold;
+        font-size: 25px;
+      }
+  
+      .rudaina-link{
+        display: flex;
+        // align-items: flex-start;
+        // margin-top: 1rem;
+  
+        .link{
+          display: flex;
+          flex-direction: row;
+          align-items:  center;
+          margin-left: 1rem;
+          // border-bottom: 2px solid blue;
+          color: darken($color: white, $amount: 0);
+  
+          :hover{
+          }
+        }
+      }
+  
+      a{
+        margin: 0 .5rem;
+      }
+    }
+  }
+}
+
+
+
+
+
+// @import "../../sass/variables";
+// @import "../../sass/mixins";
+
+
+// .footer{
+//   background-color: $color-secondary;
+//   color: $color-white;
+
+//   .footer-top{
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     align-items: center;
+//     padding-bottom: 3rem;
+//     //background-color: green;
+
+//     > * {
+//       width: 46%;
+//     }
+
+//   }
+
+//   .footerLinks-copyright{
+//     // background-color: grey;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     padding-top : 2rem ;
+//     border-top: .5px solid $color-white;
+//     // background-color: grey;
+
+//     .company-name{
+//       font-weight: bold;
+//       font-size: 25px;
+//     }
+
+//     .rudaina-link{
+//       display: flex;
+//       // align-items: flex-start;
+//       // margin-top: 1rem;
+
+//       .link{
+//         display: flex;
+//         flex-direction: row;
+//         align-items:  center;
+//         margin-left: 1rem;
+//         // border-bottom: 2px solid blue;
+//         color: darken($color: $color-white, $amount: 0);;
+
+//         :hover{
+//           @include transition;
+//           @include tilt;
+//         }
+//       }
+//     }
+
+//     a{
+//       margin: 0 .5rem;
+//     }
+//   }
+// }
+
+// .footer-social{
+
+  
+//   > * {
+//     margin-bottom: 1rem;
+//   }
+// }
+
+// .form{
+//   display: inline-block;
+//   width: 70%;
+  
+//   .formContainer{
+//     background-color:  darken($color: $color-secondary, $amount: 10);
+//     // @include borderRadius(1000rem);
+//     border-bottom: 1px solid $color-primary;
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+//     padding: .5rem .5rem .5rem 0;
+
+//     .submitButton{
+//       // @include icon;
+//       color: $color-primary;
+//       border: 1px solid $color-primary;
+//     }
+//   }
+// }
+
+
+// .footer-social-links{
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: flex-start;
+//   align-items: center;
+//   // background-color: red;
+//   // margin: .5rem 0;
+
+
+//   i{
+//     display: flex;
+//     color:white;
+//     justify-content: center;
+//     align-items: center;
+//     @include icon;
+//     margin-right: 1rem;
+//     transition: all .2s ease-in;
+//     -webkit-transition: all .2s ease-in;
+//     -moz-transition: all .2s ease-in;
+//     -ms-transition: all .2s ease-in;
+//     -o-transition: all .2s ease-in;
+//     -moz-box-shadow: 0 0 4px #000;
+//     -webkit-box-shadow: 0 0 4px #000;
+//     box-shadow: 0 0 4px #000;
+    
+//     &:hover{
+//       opacity: .7;
+//     }
+//   }
+
+//   .fa-facebook{
+//     background-color: #3F558F;
+//   }
+  
+//   .fa-instagram{
+//     background-color: blue;
+//     background: linear-gradient(to bottom right , #5850C3 , #D72C6F)
+//   }
+  
+//   .fa-twitter-square{
+//     background-color: #00A7E5;
+//   }
+  
+//   .fa-linkedin-in{
+//     background-color: #0277B0;
+//   }
+
+//   .fa-envelope{
+//     background-color: #E65A4D;
+//   }
+// } 

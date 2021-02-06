@@ -1,0 +1,21 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+
+.AuthHeadings{
+  margin-bottom: 1rem;
+
+  .AuthHeading{
+    // font-size: 25px;
+    display: inline-block;
+    padding-bottom: 5px;
+    position: relative;
+    margin-bottom: 1rem;
+  
+    @include underline;
+  }
+  
+  .AuthSubHeading{
+    //color: lighten($color: #000000, $amount: 40);
+    color: $color-secondary;
+  }
+}

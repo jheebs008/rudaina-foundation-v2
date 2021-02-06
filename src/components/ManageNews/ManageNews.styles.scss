@@ -1,0 +1,154 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+
+.eventsContainer{
+  .newsContainer{
+    background-color: grey;
+    display: grid;
+    grid-template-columns: 25% 73%;
+    grid-column-gap: 2%;
+    background-color: $color-grey-light;
+    border-radius: 1rem;
+    margin: 2rem 0;
+    min-height: 20rem;
+    // box-shadow: 0 0 1rem $color-black;
+    overflow: hidden;
+
+    .NewsImage{
+      width: 100%;
+      height: 100%;
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      display: block;
+      }
+    }
+
+    .Details{
+      padding: .5rem 1rem .5rem 0;
+
+      .Footer{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+
+        .Bold{
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.FileInputContainer{
+  margin-top: 3rem;
+  .FileInput{
+    color: darken($color: $color-grey-light, $amount: 65);
+    width: 100%;
+    border: 1px solid darken($color: $color-grey-light, $amount: 15);
+    height: 4.5rem;
+    border-radius: 500px;
+    background-color: $color-grey-light;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .Label{
+      display: flex;
+      position: absolute;
+      padding: 0 2rem;
+      // height: 100%;
+
+      .Text{
+        padding-top: 1.5rem;
+      }
+
+      .uploadButton{
+        background-color: $color-grey-light;
+        height: 6rem;
+        width: 6rem;
+        border-radius: 500px;
+        border: 3px solid $color-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .2s ease-in-out;
+        margin-right: 1rem;
+    
+        &:hover{
+          cursor: pointer;
+    
+          i{
+            font-size: 2.2rem;
+            transform: scale(1.09);
+            color: $color-black;
+          }
+        }
+        
+        i{
+          font-size: 2.2rem;
+        }
+      }
+    }
+
+    input{
+      opacity: 0;
+
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+}
+/***** Example custom styling *****/
+// .myLabel {
+//   padding: 0 2rem;
+//     color: darken($color: $color-grey-light, $amount: 65);
+//     width: 100%;
+//     border: 1px solid darken($color: $color-grey-light, $amount: 15);
+//     height: 4.5rem;
+//     border-radius: 500px;
+//     background-color: $color-grey-light;
+//   @include translate(0, 50%);
+//   display: flex;
+//   align-items: center;
+
+//   .uploadButton{
+//     background-color: $color-grey-light;
+//     height: 6rem;
+//     width: 6rem;
+//     border-radius: 500px;
+//     border: 3px solid $color-white;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     transition: all .2s ease-in-out;
+//     margin-right: 1rem;
+
+//     &:hover{
+//       cursor: pointer;
+
+//       i{
+//         font-size: 2.2rem;
+//         transform: scale(1.09);
+//         color: $color-black;
+//       }
+//     }
+    
+//     i{
+//       font-size: 2.2rem;
+//     }
+//   }
+// }
+// .myLabel:active {
+//   background: #CCF;
+// }
+// .myLabel :invalid + span {
+//   color: $color-grey-dark;
+// }
+// .myLabel :valid + span {
+//   color: $color-grey-dark;
+// }

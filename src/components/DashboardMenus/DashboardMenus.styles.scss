@@ -1,0 +1,44 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+
+.dashboardMenusContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // background-color: darken($color: $color-white, $amount: 5);
+  background-color: white;
+  @include borderRadius(1rem);
+  overflow: hidden;
+
+  .imageContainer{
+    width: 17rem;
+    height: 17rem;
+    //background-color: pink;
+    margin: 2rem auto 4rem auto;
+    @include borderRadius(500rem);
+    border-top: 2px solid $color-primary;
+    border-right: 2px solid $color-primary;
+
+    img{
+      width: 100%;
+      height: 100%;
+      @include borderRadius(500rem);
+      padding: .3rem;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+
+    .thumbnail{
+      width: 100%;
+      height: 100%;
+      @include borderRadius(500rem);
+      padding: .3rem;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 3rem;
+    }
+  }
+}

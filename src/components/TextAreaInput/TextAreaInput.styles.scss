@@ -1,0 +1,20 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+
+.textAreaInput{
+  padding: 2rem;
+  color: darken($color: $color-grey-light, $amount: 65);
+  width: 100%;
+  border: 1px solid darken($color: $color-grey-light, $amount: 15);
+  height: 12rem;
+  font-family: inherit;
+  font-size: inherit;
+  @include borderRadius(20px);
+  background-color: $color-grey-light;
+  resize: none;
+
+  &:focus{
+    border: 1px solid darken($color: $color-grey-light, $amount: 15);
+  }
+
+}

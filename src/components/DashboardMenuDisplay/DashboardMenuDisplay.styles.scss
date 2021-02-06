@@ -1,0 +1,11 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+
+.dashboardMenuDisplay{
+  width: 100%;
+  height: 100%;
+  // background-color: darken($color: $color-white, $amount: 0);
+  //background-color: white;
+  @include borderRadius(1rem);
+  overflow: hidden;
+}

@@ -1,0 +1,25 @@
+@import "../../../sass/mixins";
+@import "../../../sass/variables";
+
+.calendarContainer{
+  height: 82vh;
+  width: 100%;
+  padding: 1rem;
+  position: relative;
+  //z-index: 1;
+
+  .modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding : 10rem 20%;
+    // background-color: $color-grey-light;
+    background-color: rgba($color:$color-grey-light, $alpha: .9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+  }
+}
